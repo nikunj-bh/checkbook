@@ -1,0 +1,139 @@
+/* Reset some basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 0 10px; /* extra padding on small screens */
+}
+
+/* Cards for sections */
+.form-card, .balance-card, .transactions-card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* Form inputs */
+input, select {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  width: 100%;
+  background: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Transactions table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+thead {
+  background: #007bff;
+  color: white;
+}
+
+th, td {
+  padding: 12px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr.deposit {
+  color: green;
+}
+
+tbody tr.withdraw {
+  color: red;
+}
+
+#balance {
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  input, select, button {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  th, td {
+    padding: 10px 5px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  h1, h2 {
+    font-size: 1.3rem;
+  }
+
+  input, select, button {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  th, td {
+    padding: 8px 4px;
+    font-size: 0.8rem;
+  }
+
+  .form-card, .balance-card, .transactions-card {
+    padding: 15px;
+  }
+}
